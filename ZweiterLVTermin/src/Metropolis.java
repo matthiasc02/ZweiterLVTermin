@@ -7,20 +7,22 @@ public class Metropolis {
 	}
 		public static boolean isMetropolis(boolean isCapital, int inhabitants, double taxPerPersonAndMonth)
 		{
-			boolean Metropole=false;
+			boolean resulta=false;
+			boolean resultb=false;
 			double taxPerYear=0;
+			
 			taxPerYear=(taxPerPersonAndMonth*12)*inhabitants;
 			//a:
 			if (isCapital&&(inhabitants>100_000))
 			{
-				Metropole=true;
+				resulta=true;
 			}
 			//b:
 			if ((inhabitants>200_000)&&(taxPerYear>720_000_000))
 			{
-				Metropole=true;
+				resultb=true;
 			}
-			return Metropole;					
+			return (resulta||resultb);					
 		}
 
 
