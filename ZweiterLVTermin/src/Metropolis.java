@@ -10,20 +10,18 @@ public class Metropolis {
 			boolean resulta=false;
 			boolean resultb=false;
 			double taxPerYear=0;
-			
 			taxPerYear=(taxPerPersonAndMonth*12)*inhabitants;
+			
 			//a:
 			if (isCapital&&(inhabitants>100_000))
 			{
 				resulta=true;
 			}
 			//b:
-			if ((inhabitants>200_000)&&(taxPerYear>720_000_000))
+			else if ((inhabitants>200_000)&&(taxPerYear>720_000_000))
 			{
 				resultb=true;
 			}
 			return (resulta||resultb);					
 		}
-
-
 }
